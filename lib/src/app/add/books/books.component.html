@@ -1,0 +1,55 @@
+<h2 class="h2">Add Book In Library </h2>
+
+<form class="formView" [formGroup]="addBookForm">
+    <div class="form-group justify-content-end">
+        <label for="exampleInputEmail1">Book Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="name" placeholder="Enter New Book Name">
+        <span class="text-danger"
+            *ngIf="addBookForm.get('name').hasError('required') && addBookForm.get('name').touched">* This
+            Field is required</span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Page Number</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="pageno" placeholder="Enter Page Numbers">
+        <span class="text-danger"
+        *ngIf="addBookForm.get('pageno').hasError('required') && addBookForm.get('pageno').touched">* This
+        Field is required</span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Author</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="author" placeholder="Enter Name Of Author">
+        <span class="text-danger"
+        *ngIf="addBookForm.get('author').hasError('required') && addBookForm.get('author').touched">* This
+        Field is required</span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Category</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="category" placeholder="Enter Category Of Book">
+        <span class="text-danger"
+        *ngIf="addBookForm.get('category').hasError('required') && addBookForm.get('category').touched">* This
+        Field is required</span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Price</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="price" placeholder="Enter Price Of Book">
+        <span class="text-danger"
+        *ngIf="addBookForm.get('price').hasError('required') && addBookForm.get('price').touched">* This
+        Field is required</span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Publication</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="publication" placeholder="Enter Publication Of Book">
+        <span class="text-danger"
+        *ngIf="addBookForm.get('publication').hasError('required') && addBookForm.get('publication').touched">* This
+        Field is required</span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Book Stock</label> 
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="avilablenumber" placeholder="Enter Stock Of Books">
+        <span class="text-danger"
+        *ngIf="addBookForm.get('avilablenumber').hasError('required') && addBookForm.get('avilablenumber').touched">* This
+        Field is required</span>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="button" (click)="submitForm()">Add Book</button>
+</form>

@@ -1,0 +1,84 @@
+{
+    "firstname":"Kanishk",
+    "secondname":"Sharma",
+    "email":"kane@gmail.com",
+    "dateofbirth":"08-09-2000",
+    "gender":"male",
+    "department":"CSE",
+    "year":"4",
+    "rollno":"1803310099"
+}
+
+{
+    "name":"Data Structures and Algorithms Made Easy: Data Structures and Algorithmic Puzzles ",
+    "pageno":"204",
+    "author":"Narasimha Karumanchi ",
+    "category":"Data Structure and Algorithms",
+    "rollno":"1803310099",
+    "fromdate":"20-09-2021",
+    "todate":"26-09-2021"
+}
+
+{
+    "firstname":"Saurav",
+    "secondname":"Gupta",
+    "email":"saurav@gmail.com",
+    "dateofbirth":"08-09-2000",
+    "gender":"male",
+    "department":"CSE",
+    "employid":"180331009",
+    "password":"saurav12"
+}
+
+
+form
+
+<h2 class="h2">Add Book In Library </h2>
+
+<form class="formView">
+    <div class="form-group justify-content-end">
+        <label for="exampleInputEmail1">First Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Second Name</label>
+        <input type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Email</label>
+        <input type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Date Of Birth</label>
+        <input type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Gender</label>
+        <input type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Department</label>
+        <input type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Year</label>
+        <input type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Univesty Roll Number</label>
+        <input type="text" class="form-control" id="exampleInputPassword1">
+          <span class="text-danger"
+        *ngIf="addBookForm.get('pageno').hasError('required') && addBookForm.get('pageno').touched">* This
+        Field is required</span>
+    </div>
+</form>
+
+  <span class="text-danger"
+        *ngIf="addBookForm.get('pageno').hasError('required') && addBookForm.get('pageno').touched">* This
+        Field is required</span>
+
+ <tbody *ngIf="author$ | async as author">
+            <tr *ngFor="let i of author">
+                <td>{{i.author}}</td>
+            </tr>          
+        </tbody>

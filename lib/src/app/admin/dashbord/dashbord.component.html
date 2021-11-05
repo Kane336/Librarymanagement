@@ -1,0 +1,136 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" id="navbarheading">Library Management System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav" id="navbarli">
+            <li class="nav-item dropdown" id="dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Settings
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" [routerLink]="['/student/viewprofile']"
+                        routerLinkActive="router-link-active">View Profile</a>
+                    <a class="dropdown-item" [routerLink]="['/student/editprofile']"
+                        routerLinkActive="router-link-active">Edit Profile</a>
+
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" [routerLink]="['/student/changepassword']"
+                        routerLinkActive="router-link-active">Change Password</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="logoutAdmin()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg" id="navAdmin">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="router-link-active" >Dashbord <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Books
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" [routerLink]="['/admin/add/books']" routerLinkActive="router-link-active" >Add Books</a>
+                    <a class="dropdown-item" [routerLink]="['/admin/view/books']" routerLinkActive="router-link-active" >Edit Books</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Category
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" [routerLink]="['/admin/add/category']" routerLinkActive="router-link-active">Add Category</a>
+                    <a class="dropdown-item" [routerLink]="['/admin/view/category']" routerLinkActive="router-link-active" >Edit Category</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Author
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" [routerLink]="['/admin/add/author']" routerLinkActive="router-link-active" >Add Authors</a>
+                    <a class="dropdown-item" [routerLink]="['/admin/view/author']" routerLinkActive="router-link-active" >Edit Authors</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Issue Book
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" [routerLink]="['/admin/issuebook']" routerLinkActive="router-link-active" >Issue Book To Student</a>
+                    <a class="dropdown-item" [routerLink]="['/admin/view/issuebook']" routerLinkActive="router-link-active" >Edit Issue Books</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<marquee> Library Timing Opening 9:30 AM Closing 6:30 AM Sunday OFF</marquee>
+
+
+<div class="row">
+    <div class="card" style="width: 20rem;">
+        <div class="card-body">
+            <h4 class="card-title">Register Students</h4>
+            <p class="card-text">Check Total Number Of Register Students</p>
+            <a href="#" class="btn btn-outline-info" [routerLink]="['/admin/registerstudent']" routerLinkActive="router-link-active" >Register Student</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+
+        <div class="card-body">
+            <h4 class="card-title">Total Books</h4>
+            <p class="card-text">View Total Books</p>
+            <a href="#" class="btn btn-outline-info" [routerLink]="['/admin/totalbooks']" routerLinkActive="router-link-active" >Books</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+
+        <div class="card-body">
+            <h4 class="card-title">Book Category</h4>
+            <p class="card-text">View Books Category</p>
+            <a href="#" class="btn btn-outline-info" [routerLink]="['/admin/categorybooks']" routerLinkActive="router-link-active" >Category</a>
+        </div>
+    </div>
+
+
+    <div class="card" style="width: 20rem;">
+
+        <div class="card-body">
+            <h4 class="card-title">Authors</h4>
+            <p class="card-text">View Book's Authors</p>
+            <a href="#" class="btn btn-outline-info" [routerLink]="['/admin/authors']" routerLinkActive="router-link-active" >Authors</a>
+        </div>
+    </div>
+
+
+    <div class="card" style="width: 20rem;">
+
+        <div class="card-body">
+            <h4 class="card-title">Book Issued</h4>
+            <p class="card-text">View  Book Issued </p>
+            <a href="#" class="btn btn-outline-info" [routerLink]="['/admin/bookissued']" routerLinkActive="router-link-active"  >Book Issued</a>
+        </div>
+    </div>
+</div>

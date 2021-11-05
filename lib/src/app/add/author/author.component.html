@@ -1,0 +1,12 @@
+<h2 class="h2">Add Authors In Library </h2>
+
+<form class="formView" [formGroup]="authorForm">
+    <div class="form-group justify-content-end">
+        <label for="exampleInputEmail1">Author</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="author" placeholder="Enter New Author">
+        <span class="text-danger"
+            *ngIf="authorForm.get('author').hasError('required') && authorForm.get('author').touched">* This
+            Field is required</span>
+    </div>
+    <button type="button" class="btn btn-primary" id="button" (click)="submitForm()">Add Author</button>
+</form>

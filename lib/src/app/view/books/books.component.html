@@ -1,0 +1,28 @@
+<div class="container">
+    <h2 class="heading">
+       Edit Books In Library Managment System 
+    </h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Category</th>
+                <th scope="col">Publication</th>
+                <th scope="col">Edit</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="totalBooks$ | async as total">
+            <tr *ngFor="let books of total">
+                <td>{{books.name}}</td>
+                <td>{{books.author}}</td>
+                <td>{{books.category}}</td>
+                <td>{{books.publication}}</td>
+                <td id="editColumn">
+                    <button class="btn btn-outline-primary" [routerLink]="books._id" routerLinkActive="router-link-active" >Edit </button>
+                </td>
+            </tr>          
+        </tbody>
+    </table>
+</div>

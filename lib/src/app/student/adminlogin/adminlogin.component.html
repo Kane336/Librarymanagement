@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" id="navbarheading">Library Management System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav ">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/student']" routerLinkActive="router-link-active">Student
+                    Login<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col-sm-4" id="libinfo">
+        <h4>Library Timing</h4>
+        <ul>
+            <li>
+                Opening 9:30 AM
+            </li>
+            <li>
+                Closing 6:30 AM
+            </li>
+            <li>
+                Sunday OFF
+            </li>
+        </ul>
+        <h4>What We Provid ?</h4>
+        <ul>
+            <li>Full Furniture</li>
+            <li>Free Wifi</li>
+            <li>Regular Newspapers</li>
+            <li>Descission Room</li>
+            <li>RO Water</li>
+            <li>Peacefull Environment</li>
+
+        </ul>
+    </div>
+    <div class="col-sm-8 form">
+        <h2>Admin Login</h2>
+        <div>
+            <form class="formshow" [formGroup]="loginAdmin" >
+             <div *ngIf="wrongeAdminId">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong> Wronge ! </strong> No Admin Id is avilable 
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                </div>
+                <div *ngIf="wrongePassword">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong> Wronge ! </strong> Password 
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                </div>
+                <div class="form-group col-lg-8">
+                    <label for="exampleInputEmail1">Employee ID</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter Employee ID" formControlName="employid">
+                        <span class="text-danger" *ngIf="loginAdmin.get('employid').hasError('required') && loginAdmin.get('employid').touched">* This Field is required</span>
+                </div>
+                <div class="form-group col-lg-8">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password">
+                    <span class="text-danger" *ngIf="loginAdmin.get('password').hasError('required') && loginAdmin.get('password').touched">* This Field is required</span>
+                </div>
+                <button type="submit" class="btn btn-primary"  [disabled]="!loginAdmin.valid" (click)="loginAdminData()" >Login</button>
+            </form>
+        </div>
+
+    </div>
+</div>

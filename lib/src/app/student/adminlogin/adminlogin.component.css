@@ -1,0 +1,31 @@
+#navbarheading{
+    color: white;
+}
+
+#libinfo li{
+    text-align: left;
+}
+
+#libinfo{
+    padding-left: 61px;
+    list-style-position: inside;
+    margin-top: 103px;
+}
+
+.form{
+    margin-top: 103px;
+}
+
+.form h2{
+    font-size: 43px;        
+    padding-left: 285px;
+    margin-bottom: 42px;
+}
+
+.formshow{
+    padding-left: 56px;
+}
+
+button{
+    margin-left: 12px;
+}

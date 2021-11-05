@@ -1,0 +1,20 @@
+<div class="container">
+    <h2 class="heading">
+        Edit Authors In Library Managment System  
+    </h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Authors Of Books</th>
+                <th scope="col">Edit Option</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="authors$ | async as author">
+            <tr *ngFor="let i of author">
+                <td>{{i.author}}</td>
+                <td><button class="btn btn-outline-primary" [routerLink]='i._id' routerLinkActive="router-link-active" >Edit</button></td>
+            </tr>          
+        </tbody>
+    </table>
+</div>

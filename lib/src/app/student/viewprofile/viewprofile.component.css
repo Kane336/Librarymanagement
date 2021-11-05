@@ -1,0 +1,19 @@
+#exampleInputEmail1{
+    width: 67%;
+}
+
+#exampleInputPassword1{
+    width: 67%;
+}
+
+.formView{
+    margin-left: 336px;
+    margin-top: 64px;
+}
+
+.h2{
+    justify-content: center;
+    text-align: center;
+    margin-top: 32px;
+    font-size: 43px;
+}

@@ -1,0 +1,31 @@
+
+<div class="container">
+    <h2 class="heading">
+        Edit Issued Books In Library Managment System 
+    </h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Book Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Category</th>
+                <th scope="col">Roll Number</th>
+                <th scope="col">From Date</th>
+                <th scope="col">To Date</th>
+                <th scope="col">Edit Option</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="issedBooks$ | async as bookissue">
+            <tr *ngFor="let bookIssued of bookissue">
+                <td>{{bookIssued.name}}</td>
+                <td>{{bookIssued.author}}</td>
+                <td>{{bookIssued.category}}</td>
+                <td>{{bookIssued.rollno}}</td>
+                <td>{{bookIssued.fromdate}}</td>
+                <td>{{bookIssued.todate}}</td>
+                <td> <button class="btn btn-outline-primary" [routerLink]='bookIssued._id' routerLinkActive="router-link-active" >View </button> </td>
+            </tr>          
+        </tbody>
+    </table>
+</div>

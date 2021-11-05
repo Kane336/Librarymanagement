@@ -1,0 +1,34 @@
+<h2 class="h2">Issue Book In Library </h2>
+
+<form class="formView" [formGroup]="issueBookForm">
+    <div class="form-group justify-content-end">
+        <label for="exampleInputEmail1">Book Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1"  formControlName="name" placeholder="Enter Book Name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Page Number</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="pageno" placeholder="Enter Page Number Of Books">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Author</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="author" placeholder="Enter Author Of Books">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Category</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="category" placeholder="Enter Category Of Books">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Roll Number</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="rollno" placeholder="Enter Roll Number Of Student To Issued">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Start Date</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="fromdate" placeholder="Enter Start Date  Issed In Form DD-MM-YEAR">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Last Date</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" formControlName="todate" placeholder="Enter Last Date  Issed In Form DD-MM-YEAR">
+    </div>
+
+    <button class="btn btn-primary" (click)="formSubmit()" id="button">Issued Books</button>
+</form>

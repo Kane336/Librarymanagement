@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+
+#editColumn{
+    display: flex;
+}
+
+#editColumn button{
+    margin-left: 12px;
+}
+
+.container{
+    margin-top: 45px;
+}
+
+.heading{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 49px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.table{
+    font-family: 'Hind Siliguri', sans-serif;
+}

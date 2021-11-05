@@ -1,0 +1,12 @@
+<h2 class="h2">Add Category In Library </h2>
+
+<form class="formView" [formGroup]="Categoryform">
+    <div class="form-group justify-content-end">
+        <label for="exampleInputEmail1">Category</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="category" placeholder="Enter New Category">
+        <span class="text-danger"
+            *ngIf="Categoryform.get('category').hasError('required') && Categoryform.get('category').touched">* This
+            Field is required</span>
+    </div>
+    <button type="button" class="btn btn-primary" id="button" (click)="submitForm()">Add Category</button>
+</form>
